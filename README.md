@@ -3,7 +3,7 @@
 
 Software em console para registro de alunos desenvolvido para o TP1 do bloco de desenvolvimento java.
 
-O software perminte reailizar as seguintes operações:
+O software permite realizar as seguintes operações:
 
 - `Registrar`: registra novos alunos, sendo necessário informar o Nome, Idade, nota da primeira prova, nota da segunda prova.
 the folder to maintain sources
