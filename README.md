@@ -11,6 +11,4 @@ the folder to maintain sources
 
 Com essas informações o software calcula automaticamente a média de cada aluno e informa o status da aprovação do aluno. Essas informações são exibidas na consulta.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
 > O projeto foi desenvolvido em JAVA utilizando o Visual Studio Code.
