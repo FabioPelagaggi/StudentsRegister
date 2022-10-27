@@ -5,7 +5,7 @@ Software em console para registro de alunos desenvolvido para o TP1 do bloco de 
 
 O software permite realizar as seguintes operações:
 
-- `Registrar`: registra novos alunos, sendo necessário informar o Nome, Idade, nota da primeira prova, nota da segunda prova.
+- `Registrar`: Registra novos alunos, sendo necessário informar o Nome, Idade, nota da primeira prova, nota da segunda prova.
 the folder to maintain sources
 - `Consultar`: Consulta as informações do aluno desejado, a consulta pode ser realizada pelo Nome ou ID do aluno.
 
