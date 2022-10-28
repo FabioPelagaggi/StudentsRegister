@@ -2,7 +2,7 @@ package infnet.app.classes;
 
 public class Classroom {
 
-    public final static int MAX_CLASS = 1;
+    public final static int MAX_CLASS = 100;
     public static int nextStudentId = 0;
 
     private static Student[] studentsList = new Student[MAX_CLASS];
