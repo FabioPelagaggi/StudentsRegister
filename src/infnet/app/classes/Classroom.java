@@ -14,6 +14,15 @@ public class Classroom {
     public static Student[] getStudentsList(){
         return studentsList;
     }
+    public static String[] getStudentsNames(){
+        return namesList;
+    }
+    public static Float[] getStudentsFinalGrades(){
+        return finalGradeList;
+    }
+    public static String[] getStudentsStatus(){
+        return statusList;
+    }
 
     public static void addStudent(Student student){
         
@@ -53,13 +62,5 @@ public class Classroom {
         return studentFound;
     };
 
-    public static String[] getStudentsNames(){
-        return namesList;
-    }
-    public static Float[] getStudentsFinalGrades(){
-        return finalGradeList;
-    }
-    public static String[] getStudentsStatus(){
-        return statusList;
-    }
+    
 }

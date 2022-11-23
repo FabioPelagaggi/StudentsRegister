@@ -33,33 +33,34 @@ public class Print {
     }
 
     public static void studentData(Student student){
-        System.out.println();
-        System.out.println("--------------------------------");
-        System.out.println("ID: " + student.getId());
-        System.out.println("Name: " + student.getName());
-        System.out.println("Age: " + student.getAge());
-        System.out.println("Grade 1: " + student.getGrade1());
-        System.out.println("Grade 2: " + student.getGrade2());
-        System.out.println("Final Grade 1: " + student.getGradeFinal());
-        System.out.println("Student Status: " + student.getStatus());
-        System.out.println("--------------------------------");
-        System.out.println();
+        System.out.println(student.toString());
+        // System.out.println();
+        // System.out.println("--------------------------------");
+        // System.out.println("ID: " + student.getId());
+        // System.out.println("Name: " + student.getName());
+        // System.out.println("Age: " + student.getAge());
+        // System.out.println("Grade 1: " + student.getGrade1());
+        // System.out.println("Grade 2: " + student.getGrade2());
+        // System.out.println("Final Grade 1: " + student.getGradeFinal());
+        // System.out.println("Student Status: " + student.getStatus());
+        // System.out.println("--------------------------------");
+        // System.out.println();
     };
 
-    public static void listStudents(Student[] students){
-        boolean found = false;
+    // public static void listStudents(Student[] students){
+    //     boolean found = false;
 
-        for (Student student : students) {
-            if(student != null){
-                studentData(student);
-                found = true;
-            }
-        }
+    //     for (Student student : students) {
+    //         if(student != null){
+    //             studentData(student);
+    //             found = true;
+    //         }
+    //     }
 
-        if (!found){
-            message("There are no registered students in the classroom yet.");
-        }
-    };
+    //     if (!found){
+    //         message("There are no registered students in the classroom yet.");
+    //     }
+    // };
 
     public static void dataList(String[] dataList){
         boolean found = false;
@@ -81,6 +82,20 @@ public class Print {
         for (Float data : dataList) {
             if (data != null) {
                 message(data.toString());
+                found = true;
+            }
+        }
+
+        if (!found){
+            message("There are no registered students in the classroom yet.");
+        }
+    }
+    public static void dataList(Student[] dataList){
+        boolean found = false;
+
+        for (Student data : dataList) {
+            if (data != null) {
+                studentData(data);
                 found = true;
             }
         }

@@ -6,7 +6,6 @@ public class Valid {
 
     static Scanner scanner = new Scanner(System.in);
     
-
     public static boolean data(String data, String input){
         boolean validData = false;
                     

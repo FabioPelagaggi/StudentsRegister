@@ -15,7 +15,7 @@ public class Menu {
         do {
             Print.mainMenuOptions();
             
-            input = scanner.next();  
+            input = scanner.nextLine();  
             
             switch (input) {
                 case "1":
@@ -50,7 +50,7 @@ public class Menu {
         if (Classroom.nextStudentId < Classroom.MAX_CLASS) {
             Student student = new Student();
         
-            setData("Name", student);        
+            setData("Full Name", student);        
             setData("Age", student);
             setData("Grade 1", student);
             setData("Grade 2", student);
@@ -60,7 +60,7 @@ public class Menu {
             int savedId = Classroom.nextStudentId -1;
             Student savedStudent = Classroom.getStudentsList()[savedId];
 
-            Print.message("Student "+ savedStudent.getName() +" saved with the ID "+ savedStudent.getId());
+            Print.message("Student "+ savedStudent.getName() +" ---> saved with the ID "+ savedStudent.getId());
             Print.studentData(savedStudent);
         } else {
             Print.message("Classroom is already full, it is not possible to register new students.");
@@ -87,6 +87,10 @@ public class Menu {
         } while (!"3".equalsIgnoreCase(input));
     };
 
+    private static void listStudents() {
+        Print.dataList(Classroom.getStudentsList());
+    };
+
     private static void listStudentsNames() {
         Print.dataList(Classroom.getStudentsNames());
     }
@@ -104,10 +108,10 @@ public class Menu {
         
         do {
             Print.message("Student " + data + ": ");
-            input = scanner.next();
+            input = scanner.nextLine();
             
             switch(data){
-                case "Name":
+                case "Full Name":
                     validData = Valid.data("Name", input);
                     if (validData){
                         student.setName(input);
@@ -180,8 +184,4 @@ public class Menu {
             Print.message("Student with the " + data + " "+ input + " NOT Found.");
         }
     }
-
-    private static void listStudents() {
-        Print.listStudents(Classroom.getStudentsList());
-    };
 }

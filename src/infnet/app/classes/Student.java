@@ -3,7 +3,9 @@ package infnet.app.classes;
 public class Student {
 
     private static int id;
-    private static String name;
+    private static String firstName;
+    private static String middleName = "";
+    private static String lastName = "";
 	private static int age;
 	private static float grade1;
     private static float grade2;
@@ -17,12 +19,59 @@ public class Student {
         return id;
     };
 
-    public void setName(String inputName) {
-        name = inputName;
+    private void setFirstName(String inputFirstName) {
+        firstName = inputFirstName;
     };
+
+    private String getFirstName(){
+        return firstName;
+    };
+
+    private void setMiddleName(String inputMiddleName) {
+        middleName = inputMiddleName;
+    };
+
+    private String getMiddleName(){
+        return middleName;
+    };
+
+    private void setLastName(String inputLastName) {
+        lastName = inputLastName;
+    };
+
+    private String getLastName(){
+        return lastName;
+    };
+
+    public void setName(String inputFullName) {
+        String[] nameArray = inputFullName.split(" ");
+
+        setFirstName(nameArray[0]);
+        if(nameArray.length > 2){
+            setMiddleName(middleNameBuilder(nameArray));
+        }
+        if(nameArray.length > 1){
+            setLastName(nameArray[nameArray.length -1]);
+        }
+        
+    };
+
     public String getName(){
-        return name;
+        StringBuilder fullName = new StringBuilder();
+
+        String firstName = getFirstName();
+        String middleName = getMiddleName();
+        String lastName = getLastName();
+
+        fullName.append(firstName);
+        fullName.append(" ");
+        fullName.append(middleName);
+        fullName.append(" ");
+        fullName.append(lastName);
+
+        return fullName.toString();
     };
+
 
     public void setAge(int inputAge) {
         age = inputAge;
@@ -74,4 +123,31 @@ public class Student {
 
         return status;
     }
+
+    private String middleNameBuilder(String[] nameArray){
+        StringBuilder middleNameBuilder = new StringBuilder();
+
+        for (int i = 1; i < nameArray.length -1; i++) {
+            middleNameBuilder.append(nameArray[i]);
+            if(i < nameArray.length -2){
+                middleNameBuilder.append(" ");
+            }
+        }
+
+        return middleNameBuilder.toString();
+    }
+
+    @Override
+	public String toString() {
+		return
+        "--------------------------------\n" + 
+        "ID: " + this.getId() + "\n" + 
+        "Name: " + this.getName() + "\n" + 
+        "Age: " + this.getAge() + "\n" + 
+        "Grade 1: " + this.getGrade1() + "\n" + 
+        "Grade 2: " + this.getGrade2() + "\n" + 
+        "Final Grade 1: " + this.getGradeFinal() + "\n" + 
+        "Student Status: " + this.getStatus() + "\n" + 
+        "--------------------------------";
+	}
 }
