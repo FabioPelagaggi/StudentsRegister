@@ -1,7 +1,7 @@
 # Bloco Desenvolvimento JAVA
 ## TP3 Desenvolvimento JAVA
 
-Software em console para registro de alunos desenvolvido para o TP1 do bloco de desenvolvimento java.
+Software em console para registro de alunos desenvolvido para o TP3 do bloco de desenvolvimento java.
 
 O software permite realizar as seguintes operações:
 
