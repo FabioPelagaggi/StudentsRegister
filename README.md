@@ -1,5 +1,5 @@
 # Bloco Desenvolvimento JAVA
-## TP1 Desenvolvimento JAVA
+## TP3 Desenvolvimento JAVA
 
 Software em console para registro de alunos desenvolvido para o TP1 do bloco de desenvolvimento java.
 
